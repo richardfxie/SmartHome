@@ -1,3 +1,8 @@
+//An updated homebridge thermostat plugin based on 
+//https://github.com/jeffmcfadden/homebridge-pi-thermostat-accessory/blob/master/index.js 
+//is built to send HomeKit commands to the REST APIs provided by thermostat program described here. 
+
+
 var request = require("request");
 var Service, Characteristic;
 
