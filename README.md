@@ -22,13 +22,10 @@ gcc -Wall -O2 -o thermostat thermostat.c -lpthread -lwiringPi
 7.	An updated homebridge thermostat plugin based on https://github.com/jeffmcfadden/homebridge-pi-thermostat-accessory/blob/master/index.js is built to send HomeKit commands to the REST APIs provided by thermostat program described here. See appendix for code listing for the updated plugin index.js
 
 8.	Create /etc/default/homebridge file with the below:
-# Defaults / Configuration options for homebridge
-# The following settings tells homebridge where to find the config.json file and where to persist the data (i.e. pairing and others)
+
 HOMEBRIDGE_OPTS=-U /var/homebridge
 
-# If you uncomment the following line, homebridge will log more
-# You can display this via systemd's journalctl: journalctl -f -u homebridge
-# DEBUG=*
+
 
 9.	Create homebridge user to run homebridge service. 
  sudo useradd --system homebridge
