@@ -2,6 +2,8 @@
  * usage: thermostat <port>
  * 
  * Richard Xie
+ *
+ * To compile: gcc -Wall -O2 -o thermostat thermostat.c -lpthread -lwiringPi
  */
 
 #include <stdio.h>
