@@ -4,7 +4,7 @@
 
 /etc/default/homebridge
 
-#Installation steps:
+# Installation steps:
 
 1.	Install node js and hombebridge.
 2.	Install PiThermostat plugin. sudo npm install –g homebridge-pi-thermost
@@ -23,7 +23,14 @@ gcc -Wall -O2 -o thermostat thermostat.c -lpthread -lwiringPi
 
 8.	Create /etc/default/homebridge file with the below:
 
+#Defaults / Configuration options for homebridge
+#The following settings tells homebridge where to find the config.json file and where to persist the data (i.e. pairing and others)
 HOMEBRIDGE_OPTS=-U /var/homebridge
+
+#If you uncomment the following line, homebridge will log more
+#You can display this via systemd's journalctl: journalctl -f -u homebridge
+#DEBUG=*
+
 
 
 
