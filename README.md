@@ -57,20 +57,32 @@ sudo cp ~/thermostat /var/homebridge
 
 14.	Change permission. sudo chmod –R 0777 /var/homebridge
 15.	Create homebridge.service settings in /etc/system/system below to ensure that startThermostat.sh is executed during system startup.
+
 [Unit]
+
 Description=Node.js HomeKit Server
+
 After=syslog.target network-online.target
 
 [Service]
+
 Type=simple
+
 User=homebridge
+
 EnvironmentFile=/etc/default/homebridge
+
 ExecStart=/var/homebridge/startThermostat.sh
+
 Restart=on-failure
+
 RestartSec=10
+
 KillMode=process
 
+
 [Install]
+
 WantedBy=multi-user.target
 
 
