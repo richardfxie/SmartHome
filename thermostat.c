@@ -469,7 +469,7 @@ int main(int argc, char **argv) {
       memset(res_buf, 0, BUFSIZE);
       sprintf(res_buf, "HTTP/1.1 200 \r\nConnection: Keep-Alive\r\n Accept: multipart/form-data\r\nAccept-Encoding: multipart/form-data\r\nServer: Simple Rest Server\r\nache-control: no-store\r\nContent-Length: %d\r\nContent-Type: Application\/json\r\n\r\n%s", strlen(res.response), res.response );
       //n = write(childfd, res.response, strlen(res.response));
-//printf("response=%s\n", res.response);
+      //printf("response=%s\n", res.response);
       n = write(childfd, res_buf, strlen(res_buf));
 
       if (n < 0) 
