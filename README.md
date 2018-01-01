@@ -52,10 +52,13 @@ sudo cp ~/thermostat /var/homebridge
 13.	Create startThermostat.sh, with the following content:
 
 #!/bin/sh -
+
 /var/homebridge/thermostat
+
 /usr/local/bin/homebridge $HOMEBRIDGE_OPTS
 
 14.	Change permission. sudo chmod –R 0777 /var/homebridge
+
 15.	Create homebridge.service settings in /etc/system/system below to ensure that startThermostat.sh is executed during system startup.
 
 [Unit]
