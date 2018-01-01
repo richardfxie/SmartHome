@@ -88,8 +88,12 @@ WantedBy=multi-user.target
     ]
 
 }
+
 If thermostat executable runs on a different Raspberry Pi, then the ip_address will be “ip_address:9999”, instead of “localhost:9999”.
+
 17.	sudo systemctl daemon-reload
+
 18.	sudo systemctl enable homebridge
+
 19.	sudo systemctl start homebridge
 
