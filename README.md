@@ -4,7 +4,7 @@
 
 /etc/default/homebridge
 
-# Installation steps:
+# Installation steps for Thermostat:
 
 1.	Install node js and hombebridge.
 2.	Install PiThermostat plugin. sudo npm install –g homebridge-pi-thermost
